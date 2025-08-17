@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import * as faceapi from "face-api.js";
+import axios from 'axios';
 
-export default function FaceExpressionDetector() {
+export default function FaceExpressionDetector( {setSongs}) {
   const videoRef = useRef();
   const [mood, setMood] = useState("No mood detected yet");
 
@@ -46,7 +47,13 @@ export default function FaceExpressionDetector() {
       if (confidence > max) {
         max = confidence;
         currentMood = expression;
-        console.log(expression);
+        // console.log(expression);
+        axios.get(`http://localhost:3000/songs?mood=${expression}`)
+        .then(response=>{
+          // console.log(response.data);
+          setSongs(response.data.songs)
+          
+        })
         
       }
     }

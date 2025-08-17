@@ -1,29 +1,9 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
 import "./Songs.css"
 
-const MoodSongs = () => {
+const MoodSongs = ({Songs}) => {
 
-    const [Songs, setSongs] = useState([
-     {
-        title:"test_title",
-        artist:"test_artist",
-        song:"url"
-
-     },
-        {
-        title:"test_title",
-        artist:"test_artist",
-        song:"url"
-
-     },
-        {
-        title:"test_title",
-        artist:"test_artist",
-        song:"url"
-
-     }
-    ])
-
+  
   return (
     <div className="mood-songs">
         <h2>Recomanend songs</h2>
@@ -35,6 +15,7 @@ const MoodSongs = () => {
                 <p>{song.artist}</p>
             </div>
             <div className="song">
+               <audio src={song.audio} controls></audio>
                 <i className="ri-pause-line"></i>
                 <i className="ri-play-circle-fill"></i>
             </div>
