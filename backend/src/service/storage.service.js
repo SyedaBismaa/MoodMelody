@@ -13,7 +13,9 @@ function uploadFile(file){
     return new Promise((resolve,reject)=>{
         imageKit.upload({
             file:file.buffer,
-            fileName:"hello-cohort"
+            fileName:Math.random().toString(36).substring(7) ,
+            folder:"Moody-audio",
+            mood:file.mood
         },(error,result)=>{
             if(error){
                 reject(error);
