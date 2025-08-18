@@ -9,5 +9,22 @@ body,
 #root {
   height: 100%;
   width: 100%;
-  background-color: #1b1a1a;
+  background-color: var(--bg);
+}
+
+:root{
+  --bg: #0e0f13;
+  --card: #1a1c23;
+  --card-hover: #242834;
+  --text: #e6e7eb;
+  --muted: #a5abb3;
+  --accent: #7c8cf8;
+  --success: #34d399;
+  --success-hover: #5eead4;
+  --danger: #f87171;
+  --danger-hover: #fca5a5;
+}
+
+body{
+  color: var(--text);
 }

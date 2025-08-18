@@ -67,7 +67,7 @@ export default function FaceExpressionDetector( {setSongs}) {
         ref={videoRef}
         autoPlay
         muted
-        style={{ width: "500px", border: "2px solid #ccc", marginBottom: "10px" }}
+        style={{ width: "500px", border: "1px solid var(--card-hover)", marginBottom: "10px", borderRadius: "12px" }}
       />
       <br />
       <button
@@ -75,12 +75,14 @@ export default function FaceExpressionDetector( {setSongs}) {
         style={{
           padding: "10px 20px",
           fontSize: "16px",
-          backgroundColor: "#4caf50",
-          color: "white",
+          backgroundColor: "var(--accent)",
+          color: "#ffffff",
           border: "none",
           borderRadius: "5px",
           cursor: "pointer",
+  
         }}
+        
       >
         Detect Mood
       </button>
