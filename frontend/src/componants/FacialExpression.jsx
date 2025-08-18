@@ -48,7 +48,7 @@ export default function FaceExpressionDetector( {setSongs}) {
         max = confidence;
         currentMood = expression;
         // console.log(expression);
-        axios.get(`http://localhost:3000/songs?mood=${expression}`)
+        axios.get(`https://moodmelody-shih.onrender.com/songs?mood=${expression}`)
         .then(response=>{
           // console.log(response.data);
           setSongs(response.data.songs)
